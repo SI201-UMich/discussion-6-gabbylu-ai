@@ -130,7 +130,7 @@ class HorseRaces:
             EXAMPLE: {'Gold Ship': 16.5, 'Daiwa Scarlet': 17.2}
         '''
         out = {}
-        for horse, race_times in self.race_dict.item():
+        for horse, race_times in self.race_dict.items():
             times = list(race_times.values())
             if len(times) == 0:
                 out[horse] = 0.0
