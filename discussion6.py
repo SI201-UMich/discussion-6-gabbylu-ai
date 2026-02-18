@@ -86,6 +86,18 @@ class HorseRaces:
         '''
         if horse not in self.race_dict:
             return None, 999.9
+        
+        horse_races = self.race_dict[horse]
+        fastest_time = 999.9
+        fastest_race = None
+
+        for race, time in horse_races.items():
+            if time < fastest_time:
+                fastest_race = race
+                fastest_time = time
+        
+        return fastest_race, fastest_time
+
 
 ###############################################################################
 ##### TASK 3
